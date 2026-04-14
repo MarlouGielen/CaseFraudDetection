@@ -1,2 +1,24 @@
 # CaseFraudDetection
 This repository contains a curated subset of 100 emails derived from the Enron Email Dataset. The goal of this dataset is to provide a manageable sample for testing GenAI based fraud detection models with a high associated costs per token.
+
+The original Enron corpus consists of over 500k emails from the company's collapse in 2002. Because the original data lacks explicit "fraud" labels, this subset utilizes labels generated through a combination of Machine Learning heuristics and Manual Inspection. 
+
+# Methodology & Labeling
+The labels in this dataset were assigned using two primary signals to distinguish between Fraud and Non-Fraud classes:
+1. Automated ML Labeling
+- Emails were processed using two high-precision SVM (Support Vector Machine) models with TF-IDF embedding:
+- Phishing Model: Trained on the Kaggle Phishing Dataset.
+- Social Engineering Model: Trained on the ACLwiki Social Engineering Dataset.
+
+2. Email Signal Heuristics
+- If the ML models flagged an email, the following metadata signals were checked to confirm high-probability fraud:
+- Person of Interest (POI): Emails involving employees identified in the Enron data leak.
+- Suspicious Folders: Focus on items from Junk or Deleted Items.
+- Low Communication Threshold: Senders with a history of fewer than 4 emails were assigned a higher fraud probability.
+- Interaction Check: Emails containing replies or forwards were assigned a lower probability of fraud.
+
+# Privacy & Ethics
+As noted by researchers like Leslie Kaelbling (MIT), maintaining privacy while training deep neural networks on this data is critical. Users should handle this data responsibly, keeping in mind that it contains real-world corporate communications.
+
+# Credits & References
+The original data can be found on Kaggle: https://www.kaggle.com/datasets/advaithsrao/enron-fraud-email-dataset/data
