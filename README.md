@@ -22,3 +22,24 @@ As noted by researchers like Leslie Kaelbling (MIT), maintaining privacy while t
 
 # Credits & References
 The original data can be found on Kaggle: https://www.kaggle.com/datasets/advaithsrao/enron-fraud-email-dataset/data
+
+Enron Dataset
+Title: Enron Email Dataset
+URL: https://www.cs.cmu.edu/~enron/
+Publisher: MIT, CMU
+Author: Leslie Kaelbling, William W. Cohen
+Year: 2015
+
+Phishing Email Detection Dataset
+Title: Phishing Email Detection
+URL: https://www.kaggle.com/dsv/6090437
+DOI: 10.34740/KAGGLE/DSV/6090437
+Publisher: Kaggle
+Author: Subhadeep Chakraborty
+Year: 2023
+
+CLAIR Fraud Email Collection
+Title: CLAIR collection of fraud email
+URL: http://aclweb.org/aclwiki
+Author: Radev, D.
+Year: 2008
